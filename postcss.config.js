@@ -7,6 +7,13 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 module.exports = {
 	plugins: [
 		require('tailwindcss'),
+		require('postcss-preset-env')({
+			autoprefixer: true,
+			stage: 3,
+			features: {
+				'nesting-rules': true,
+			},
+		}),
 
 		// only needed if you want to purge
 		...(process.env.NODE_ENV === 'production'

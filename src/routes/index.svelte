@@ -1,3 +1,9 @@
+<style>
+	p {
+		@apply text-xl text-green-500;
+	}
+</style>
+
 <svelte:head>
 	<title>Sapper Tailwind project template</title>
 </svelte:head>
