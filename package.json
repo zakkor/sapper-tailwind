@@ -12,7 +12,7 @@
 		"cy:run": "cypress run",
 		"cy:open": "cypress open",
 		"test": "run-p --race dev cy:run",
-		"fmt": "prettier --write --plugin-search-dir='.' './src/**/*.(js|svelte)'"
+		"fmt": "prettier --write --plugin-search-dir=. './src/**/*.(js|svelte)'"
 	},
 	"husky": {
 		"hooks": {
