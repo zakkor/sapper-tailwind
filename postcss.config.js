@@ -9,6 +9,13 @@ module.exports = {
 		require('tailwindcss'),
 
 		// only needed if you want to purge
-		...(process.env.NODE_ENV === 'production' ? [purgecss, require('cssnano')] : []),
+		...(process.env.NODE_ENV === 'production'
+			? [
+					purgecss,
+					require('cssnano')({
+						preset: ['default', { discardComments: { removeAll: true } }],
+					}),
+			  ]
+			: []),
 	],
 }
