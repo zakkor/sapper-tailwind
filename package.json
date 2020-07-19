@@ -4,15 +4,15 @@
 	"version": "0.0.1",
 	"scripts": {
 		"build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/tailwind-built.css",
-		"build": "yarn run build:tailwind && sapper build --legacy",
+		"build": "yarn run build:tailwind && sapper build",
 		"dev:tailwind": "postcss static/tailwind.css -o static/tailwind-built.css",
 		"dev": "sapper dev",
-		"export": "yarn run build:tailwind && sapper export --legacy",
+		"export": "yarn run build:tailwind && sapper export",
 		"start": "node __sapper__/build",
 		"cy:run": "cypress run",
 		"cy:open": "cypress open",
 		"test": "run-p --race dev cy:run",
-		"fmt": "prettier --write --plugin-search-dir=. './src/**/*.(js|svelte)'"
+		"fmt": "prettier --write --plugin-search-dir=. \"./src/**/*.(js|svelte)\""
 	},
 	"husky": {
 		"hooks": {
@@ -31,10 +31,6 @@
 		"@babel/preset-env": "^7.10.2",
 		"@babel/runtime": "^7.10.2",
 		"@fullhuman/postcss-purgecss": "^2.2.0",
-		"@rollup/plugin-babel": "^5.0.2",
-		"@rollup/plugin-commonjs": "^12.0.0",
-		"@rollup/plugin-node-resolve": "^8.0.0",
-		"@rollup/plugin-replace": "^2.3.2",
 		"cssnano": "^4.1.10",
 		"husky": "^4.2.5",
 		"npm-run-all": "^4.1.5",
@@ -43,12 +39,11 @@
 		"prettier": "2.0.5",
 		"prettier-plugin-svelte": "^1.1.0",
 		"pretty-quick": "^2.0.1",
-		"rollup": "^2.12.0",
-		"rollup-plugin-svelte": "^5.2.2",
-		"rollup-plugin-terser": "^6.1.0",
 		"sapper": "^0.27.13",
 		"svelte": "^3.23.0",
+		"svelte-loader-hot": "^0.3.0",
 		"svelte-preprocess": "^3.7.4",
-		"tailwindcss": "^1.4.6"
+		"tailwindcss": "^1.4.6",
+		"webpack": "^4.43.0"
 	}
 }
